@@ -1,0 +1,72 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="Middle">
+        <div class="Form">
+            <form action="/action_page.php" class="test">
+                <h3>Write Review</h3>
+                <p class="subtitle">Your experience at Sea Club Resort is valuable resource to other customers making travel plans. Please write your review </p>
+                <table class="reviewstyle">
+                    <tr>
+                        <th>
+                            <div class="input_label">
+                                <label for="fname">Name</label>
+                            </div>
+                            <input type="text" id="fname" name="name" placeholder="Enter your full name">
+                        </th>
+                        <th>
+                            <div class="input_label">
+                                <label for="email">Email Address</label>
+                            </div>
+                            <input type="email" id="email" name="email_address" placeholder="Enter your email address">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="input_label">
+                                <label for="dates">Email</label>
+                            </div>
+                            <input type="date" id="date" name="date" placeholder="dd/mm/yyyy">
+                        </th>
+                        <th>
+                            <div class="input_label">
+                                <label for="rate">Rate this Hotel</label>
+                            </div>
+                            <input type="text" id="rate" name="rate">
+                        </th>
+                    </tr>
+                </table>
+                <p>Write your review: <span>(300 words total)</span></p>
+                <textarea rows="4" cols="50">
+                </textarea>
+                <p>What did you like the most?</p>
+                <div>
+                    <input id="checkboxImageBased1" type="checkbox" name="checkboxImageBased" value="1" checked>
+                    <label for="checkboxImageBased1">Outstanding service</label>
+                    <input id="checkboxImageBased2" type="checkbox" name="checkboxImageBased" value="2">
+                    <label for="checkboxImageBased2">Elegant Hotel</label>
+                    <input id="checkboxImageBased3" type="checkbox" name="checkboxImageBased" value="3">
+                    <label for="checkboxImageBased3">Add your own</label>
+                </div>
+                <textarea rows="4" cols="50">
+                </textarea>
+                <p>Would you stay again?</p>
+                <input class="w3-radio" type="radio" name="answer" value="yes" checked>
+                <label>Yes</label>
+                <input class="w3-radio" type="radio" name="answer" value="no">
+                <label>No</label>
+                <a target="_blank" href="tryit.asp?filename=trycss_forms" class="button">Try it Yourself »</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
