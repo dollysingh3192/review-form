@@ -42,17 +42,23 @@
                             </div>
                             <div class="ratingparent">
 								<div class="rating">
-								  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+								  <!-- <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span> -->
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
 								</div>
 							</div>
+                            <span class="rollover">(Roll over and click to rate)</span>
                         </th>
                     </tr>
                 </table>
-                <p>Write your review: <span>(300 words total)</span></p>
-                <textarea rows="4" cols="50">
+                <p class="commentp">Write your review: <span>(300 words total)</span></p>
+                <textarea rows="4" cols="105">
                 </textarea>
-                <p>What did you like the most?</p>
-                <div>
+                <p class="commentplike">What did you like the most?</p>
+                <div class="checklist">
                     <input id="checkboxImageBased1" type="checkbox" name="checkboxImageBased" value="1" checked>
                     <label for="checkboxImageBased1">Outstanding service</label>
                     <input id="checkboxImageBased2" type="checkbox" name="checkboxImageBased" value="2">
@@ -60,14 +66,16 @@
                     <input id="checkboxImageBased3" type="checkbox" name="checkboxImageBased" value="3">
                     <label for="checkboxImageBased3">Add your own</label>
                 </div>
-                <textarea rows="4" cols="50">
+                <textarea rows="4" cols="105">
                 </textarea>
-                <p>Would you stay again?</p>
+                <div class="Like">
+                <p class="commentp">Would you stay again?</p>
                 <input class="w3-radio" type="radio" name="answer" value="yes" checked>
                 <label>Yes</label>
                 <input class="w3-radio" type="radio" name="answer" value="no">
                 <label>No</label>
-                <a target="_blank" href="tryit.asp?filename=trycss_forms" class="button">Try it Yourself »</a>
+                </div>
+                <a target="_blank" href="tryit.asp?filename=trycss_forms" class="button">Submit Review</a>
             </form>
         </div>
     </div>
