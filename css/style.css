@@ -1,6 +1,5 @@
 #Middle {
     width: 800px;
-    height: 400px;
     margin: 0 auto;
     background-color: #eeeeee;
 }
@@ -17,8 +16,8 @@ h3 {
     margin-bottom: 8px;
 }
 
-.test input[type=text],.test input[type=email]
-{
+.test input[type=text],
+.test input[type=email] {
     background: #FFF;
     color: #333;
     font: 13px/1.6 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
@@ -30,8 +29,7 @@ h3 {
     width: 260px;
 }
 
-.test input[type=date]
- {
+.test input[type=date] {
     background: #FFF;
     color: #333;
     font: 13px/1.6 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
@@ -85,7 +83,7 @@ h3 {
     box-shadow: inset 0 1px 3px #ddd;
     float: right;
     text-decoration: none;
-    margin:15px 15px;
+    margin: 15px 15px;
 }
 
 .subtitle {
@@ -97,7 +95,7 @@ h3 {
 .reviewstyle {
     width: 100%;
     /* border-collapse: collapse; */
-	border-spacing: 0px 10px;
+    border-spacing: 0px 10px;
 }
 
 .reviewstyle th {
@@ -112,7 +110,7 @@ h3 {
     width: 105px;
     line-height: 36px;
     margin-right: 0;
-	float:left;
+    float: left;
     vertical-align: middle;
 }
 
@@ -121,10 +119,10 @@ label {
     color: #787676;
     font-size: 13px;
 }
-.ratingparent
-{
-	float:left;
-	background: #FFF;
+
+.ratingparent {
+    float: left;
+    background: #FFF;
     color: #333;
     font: 13px/1.6 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
     height: 36px;
@@ -134,54 +132,91 @@ label {
     padding: 0 3px;
     width: 128px;
 }
-.rating
-{
-	direction: ltr;
-	float:left;
+
+.rating {
+    direction: ltr;
+    float: left;
     padding: 12px 25px;
 }
-.rating > i.fa-star-o
-{
-		     float:right;
+
+.rating > i.fa-star-o {
+    float: right;
 }
-.rating i.fa-star-o:hover:before,.rating > i.fa-star-o:hover ~ i.fa-star-o:before
-{
-			/*color:red;*/
-            content: "\f005";
+
+.rating i.fa-star-o:hover:before,
+.rating > i.fa-star-o:hover ~ i.fa-star-o:before {
+    /*color:red;*/
+    content: "\f005";
 }
-span.rollover
-{
+
+span.rollover {
     font-size: 11px;
     font-weight: 100;
     line-height: 37px;
     padding-left: 4px;
 }
-.commentp
-{
+
+.commentp {
     color: white;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.commentplike
-{
+
+.commentplike {
     color: white;
     margin-top: 10px;
     margin-bottom: 10px;
     display: inline-block;
 }
-.checklist
-{
+
+.checklist {
     display: inline-block;
     padding-left: 10px;
 }
-.checklist label
-{
+
+.checklist label {
     padding-left: 0;
     padding-right: 25px;
     vertical-align: text-top;
     color: white;
 }
-.Like
-{
+
+.Like {
     display: inline-block;
+}
+
+.reviewstyle th {
+    position: relative;
+}
+
+#nameError,
+#emailError {
+    margin: 0;
+    font-size: 11px;
+    color: red;
+    position: absolute;
+    top: 25px;
+    left: 146px;
+}
+
+#counterID {
+    margin: 0px;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+}
+
+.reviewdiv {
+    position: relative;
+
+}
+#MessageEnough
+{
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 77px;
+    right: 20px;
 }

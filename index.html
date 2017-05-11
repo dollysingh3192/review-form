@@ -20,13 +20,15 @@
                             <div class="input_label">
                                 <label for="fname">Name</label>
                             </div>
-                            <input type="text" id="fname" name="name" placeholder="Enter your full name">
+                            <input type="text" id="fname" name="name" placeholder="Enter your full name" onKeyUp="fnfname(this)">
+                            <p id="nameError" style="display:none;">Username must have alphabet characters only</p>
                         </th>
                         <th>
                             <div class="input_label">
                                 <label for="email">Email Address</label>
                             </div>
-                            <input type="email" id="email" name="email_address" placeholder="Enter your email address">
+                            <input type="email" id="email" name="email_address" placeholder="Enter your email address" onchange="ValidateEmail(this)">
+                            <p id="emailError" style="display:none;">Please enter valid Email adddress</p>
                         </th>
                     </tr>
                     <tr>
@@ -41,22 +43,25 @@
                                 <label for="rate">Rate this Hotel</label>
                             </div>
                             <div class="ratingparent">
-								<div class="rating">
-								  <!-- <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span> -->
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-								</div>
-							</div>
+                                <div class="rating">
+                                    <!-- <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span> -->
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
                             <span class="rollover">(Roll over and click to rate)</span>
                         </th>
                     </tr>
                 </table>
-                <p class="commentp">Write your review: <span>(300 words total)</span></p>
-                <textarea rows="4" cols="105">
-                </textarea>
+                <div class="reviewdiv">
+                    <p class="commentp">Write your review: <span>(300 words total)</span></p>
+                    <textarea rows="4" cols="105" placeholder="Describe here..." id="membershortdescription" onKeyUp="textCounter(this,'counterID',300);" onchange="CheckLength()"></textarea>
+                    <span id="MessageEnough"></span>
+                    <span id="counterID"></span>
+                </div>
                 <p class="commentplike">What did you like the most?</p>
                 <div class="checklist">
                     <input id="checkboxImageBased1" type="checkbox" name="checkboxImageBased" value="1" checked>
@@ -66,19 +71,19 @@
                     <input id="checkboxImageBased3" type="checkbox" name="checkboxImageBased" value="3">
                     <label for="checkboxImageBased3">Add your own</label>
                 </div>
-                <textarea rows="4" cols="105">
-                </textarea>
+                <textarea rows="4" cols="105" placeholder="Describe here..."></textarea>
                 <div class="Like">
-                <p class="commentp">Would you stay again?</p>
-                <input class="w3-radio" type="radio" name="answer" value="yes" checked>
-                <label>Yes</label>
-                <input class="w3-radio" type="radio" name="answer" value="no">
-                <label>No</label>
+                    <p class="commentp">Would you stay again?</p>
+                    <input class="w3-radio" type="radio" name="answer" value="yes" checked>
+                    <label>Yes</label>
+                    <input class="w3-radio" type="radio" name="answer" value="no">
+                    <label>No</label>
                 </div>
                 <a target="_blank" href="tryit.asp?filename=trycss_forms" class="button">Submit Review</a>
             </form>
         </div>
     </div>
+    <script src="js/validate.js"></script>
 </body>
 
 </html>
