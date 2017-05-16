@@ -73,7 +73,7 @@ h3 {
     font-weight: bold;
 }
 
-.test a.button {
+.test input[type=submit] {
     text-align: center;
     background-color: #ff7c37;
     color: white;

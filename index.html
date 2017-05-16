@@ -11,7 +11,7 @@
 <body>
     <div id="Middle">
         <div class="Form">
-            <form action="/action_page.php" class="test">
+            <form action="/action_page.php" class="test" name="theform" onsubmit="return validateForm()">
                 <h3>Write Review</h3>
                 <p class="subtitle">Your experience at Sea Club Resort is valuable resource to other customers making travel plans. Please write your review </p>
                 <table class="reviewstyle">
@@ -38,13 +38,13 @@
                             </div>
                             <input type="date" id="date" name="date" placeholder="dd/mm/yyyy">
                         </th>
-                        <th>
+                         <!--<th>
                             <div class="input_label">
                                 <label for="rate">Rate this Hotel</label>
                             </div>
                             <div class="ratingparent">
                                 <div class="rating">
-                                    <!-- <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span> -->
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span> 
                                     <i class="fa fa-star-o" aria-hidden="true"></i>
                                     <i class="fa fa-star-o" aria-hidden="true"></i>
                                     <i class="fa fa-star-o" aria-hidden="true"></i>
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                             <span class="rollover">(Roll over and click to rate)</span>
-                        </th>
+                        </th>-->
                     </tr>
                 </table>
                 <div class="reviewdiv">
@@ -79,7 +79,9 @@
                     <input class="w3-radio" type="radio" name="answer" value="no">
                     <label>No</label>
                 </div>
-                <a target="_blank" href="tryit.asp?filename=trycss_forms" class="button">Submit Review</a>
+                <!-- <a target="_blank" href="tryit.asp?filename=trycss_forms" class="button" disabled="disabled">Submit Review</a> -->
+                <!-- <button type="button" disabled>Submit Review</button> -->
+                <input id="submitbutton" type="submit"  value="Submit Review" />
             </form>
         </div>
     </div>
