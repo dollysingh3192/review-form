@@ -138,16 +138,32 @@ label {
     float: left;
     padding: 12px 25px;
 }
-
-.rating > i.fa-star-o {
+.rating > input { display: none; } 
+.rating > i {
     float: right;
 }
 
-.rating i.fa-star-o:hover:before,
-.rating > i.fa-star-o:hover ~ i.fa-star-o:before {
-    /*color:red;*/
-    content: "\f005";
+.rating > i:before { 
+  margin: 0px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f006";
 }
+
+/*.rating i.fa-star-o:hover:before,
+.rating > i.fa-star-o:hover ~ i.fa-star-o:before {
+    content: "\f005";
+}*/
+
+.rating > input:checked ~ i, /* show gold star when clicked */
+.rating:not(:checked) > i:hover, /* hover current star */
+.rating:not(:checked) > i:hover ~ i { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + i:hover, /* hover current star when changing rating */
+.rating > input:checked ~ i:hover,
+.rating > i:hover ~ input:checked ~ i, /* lighten current selection */
+.rating > input:checked ~ i:hover ~ i { color: #FFED85;  } 
 
 span.rollover {
     font-size: 11px;
