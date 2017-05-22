@@ -160,10 +160,11 @@ label {
 .rating:not(:checked) > label:hover, /* hover current star */
 .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
 
-.rating > input:checked + label:before, /* hover current star when changing rating */
-.rating > input:checked ~ label:before,
-.rating > label:hover + input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label:before { color: red;  } 
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
 
 span.rollover {
     font-size: 11px;
