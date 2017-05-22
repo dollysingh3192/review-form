@@ -136,14 +136,14 @@ label {
 .rating {
     direction: ltr;
     float: left;
-    padding: 12px 25px;
+    padding: 12px 0px;
 }
 .rating > input { display: none; } 
-.rating > i {
+.rating > label {
     float: right;
 }
 
-.rating > i:before { 
+.rating > label:before { 
   margin: 0px;
   font-size: 1.25em;
   font-family: FontAwesome;
@@ -156,14 +156,14 @@ label {
     content: "\f005";
 }*/
 
-.rating > input:checked ~ i, /* show gold star when clicked */
-.rating:not(:checked) > i:hover, /* hover current star */
-.rating:not(:checked) > i:hover ~ i { color: #FFD700;  } /* hover previous stars in list */
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
 
-.rating > input:checked + i:hover, /* hover current star when changing rating */
-.rating > input:checked ~ i:hover,
-.rating > i:hover ~ input:checked ~ i, /* lighten current selection */
-.rating > input:checked ~ i:hover ~ i { color: #FFED85;  } 
+.rating > input:checked + label:before, /* hover current star when changing rating */
+.rating > input:checked ~ label:before,
+.rating > label:hover + input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label:before { color: red;  } 
 
 span.rollover {
     font-size: 11px;
